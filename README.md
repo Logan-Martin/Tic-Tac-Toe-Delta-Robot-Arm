@@ -30,5 +30,6 @@
 
 [Cad - OnShape Document](https://cvilleschools.onshape.com/documents/b6c0dc8ca74cd78e4cfe3490/w/83d6d21bc676c767c3550309/e/f627081b1e1d9558a92df4c4?renderMode=0&uiState=6214f43c3508af00f0f56b9e)
 
+<img src="https://github.com/Logan-Martin/Tic-Tac-Toe-Delta-Robot-Arm/blob/main/TicTacToeDeltaArmWiring.png"> 
 
 
