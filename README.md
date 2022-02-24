@@ -8,7 +8,6 @@
 * [Introduction & Description](#Introduction)
 * [Materials](#Materials)
 * [Links & Documents](#Links)
-* [Links & Documents](#Links)
 * [CAD Renders](#Cad-Renders)
 * [Problems we ran into](#Problems-we-ran-into)
 * [Code](#Code)
