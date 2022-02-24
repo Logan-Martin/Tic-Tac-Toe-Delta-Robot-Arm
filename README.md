@@ -65,6 +65,9 @@ https://user-images.githubusercontent.com/71342159/155556728-a68f3392-b6fa-4784-
 
 ### Code
 
+<details><summary>Click for Code.</summary>
+<p>
+
 ```
 #include <Servo.h>
 
@@ -439,6 +442,9 @@ void loop() {
 
 }
 ```
+  
+</p>
+</details>
 
 
 
