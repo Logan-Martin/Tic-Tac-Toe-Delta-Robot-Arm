@@ -21,6 +21,10 @@
 
 ###### ***Our schedule for this entire process was to do as much work we could in class and go to BKT, a free period, when we were able to.***
 ---
+
+https://user-images.githubusercontent.com/71342159/155556728-a68f3392-b6fa-4784-8c2e-a824cd14f5ab.mp4
+
+---
 ### Materials
 - Acrylic
 - 9 panel mounted buttons
@@ -54,7 +58,6 @@
 
 1. We didn't really know how a delta arm worked. YouTube and Google were helpful, but the math behind it all was too confusing. Thus we tryed looking for someones code on a delta arm for Arduino.
 2. How do we even code this thing? This goes hand in hand with number one. We eventually got to [this](https://github.com/deltarobotone/one_system_library), a library for a Arduino Delta arm. However this was not a 100% solution.
-
 
 ---
 
