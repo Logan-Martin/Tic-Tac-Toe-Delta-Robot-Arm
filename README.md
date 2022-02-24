@@ -44,6 +44,8 @@
 
 ### Cad Renders
 
+<img align="left" src="https://github.com/Logan-Martin/Tic-Tac-Toe-Delta-Robot-Arm/blob/main/Photos/Arm_Photo.PNG"> <img align="right" src="https://github.com/Logan-Martin/Tic-Tac-Toe-Delta-Robot-Arm/blob/main/Photos/Full_Arm_Assembly.PNG">
+
 ---
 
 ### Problems we ran into
