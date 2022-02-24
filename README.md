@@ -1,6 +1,6 @@
 <p align="center">
   <b> Tic Tac Toe Delta Robot Arm</b><br>
-  <a href="#">Logan & Cole</a>
+  <a>Logan & Cole</a>
 </p>
 
 ---
