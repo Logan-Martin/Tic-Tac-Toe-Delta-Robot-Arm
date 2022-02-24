@@ -1,5 +1,7 @@
-# Tic-Tac-Toe-Delta-Robot-Arm
-## Logan & Cole
+<p align="center">
+  <b> Tic Tac Toe Delta Robot Arm</b><br>
+  <a href="#">Logan & Cole 1</a>
+</p>
 
 ---
 ## Table of Contents
