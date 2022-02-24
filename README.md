@@ -52,7 +52,7 @@
 ### Problems we ran into
 
 1. We didn't really know how a delta arm worked. YouTube and Google were helpful, but the math behind it all was too confusing. Thus we tryed looking for someones code on a delta arm for Arduino.
-2. How do we even code this thing? This goes hand in hand with number one. We eventually got to [this](https://github.com/deltarobotone/one_system_library), a library for a Arduino Delta arm:  However this was not a 100% solution.
+2. How do we even code this thing? This goes hand in hand with number one. We eventually got to [this](https://github.com/deltarobotone/one_system_library), a library for a Arduino Delta arm. However this was not a 100% solution.
 
 
 ---
