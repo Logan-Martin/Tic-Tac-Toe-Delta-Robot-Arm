@@ -55,7 +55,7 @@ https://user-images.githubusercontent.com/71342159/155556728-a68f3392-b6fa-4784-
 
 ### Problems we ran into
 
-1. We didn't really know how a delta arm worked. YouTube and Google were helpful, but the math behind it all was too confusing. Thus we tryed looking for someones code on a delta arm for Arduino. This leads to our second issue.
+1. We didn't really know how a delta arm worked. YouTube and Google were helpful, but the math behind it all was too confusing. Thus we tried looking for someones code on a delta arm for Arduino. This leads to our second issue.
 2. How do we even code this thing? We eventually got to [this](https://github.com/deltarobotone/one_system_library), a library for a Arduino Delta arm. However this was not a 100% solution. The code that was in the background making everything possible was far too complex for us change.
 3. How are we going to pick up and place tic tac toe pieces? We chose to use magnets. This means that we need a way to magnitize and un-magnitize an area on the delta arm so we can pick things up. We need to 3D print the pieces and stop the process about half way through so we can fit a manget inside. This seems easy to do, but 3D printing takes time and that is not exactly something we a have a ton of.
 4. Are we going to have the tic tac toe board be cleared when the game is over? How will the robot arm knows who wins and when they win? Why did we even make this robot? Existentialism aside, these problems can only we be solved if we have enough time. Ideally I would love the board to clear itself, but that again will take time.
