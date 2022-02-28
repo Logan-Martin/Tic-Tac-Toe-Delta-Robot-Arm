@@ -50,8 +50,8 @@ https://user-images.githubusercontent.com/71342159/155556728-a68f3392-b6fa-4784-
 
 <img src="https://github.com/Logan-Martin/Tic-Tac-Toe-Delta-Robot-Arm/blob/main/Photos/Arm_Photo.PNG">
 One of the three arms used to make the full delta arm assembly in CAD
-
 <img align="right" src="https://github.com/Logan-Martin/Tic-Tac-Toe-Delta-Robot-Arm/blob/main/Photos/Full_Arm_Assembly.PNG"> 
+
 the full delta arm assembly desgined in CAD
 <img src="https://github.com/Logan-Martin/Tic-Tac-Toe-Delta-Robot-Arm/blob/main/Photos/DeltaArmTicTacToeButtonBox.jpg"> 
 
