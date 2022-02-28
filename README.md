@@ -85,8 +85,8 @@ int button7 = 7;
 int button8 = 8;
 int button9 = 9;
 
-int PowerButton = 1; // may or not use
-int LCDScreen = 2; // may or not use
+int PowerButton = 1; // not being used
+int LCDScreen = 2; // not being used
 
 Servo servo1;
 Servo servo2;
@@ -139,7 +139,7 @@ void setup() {
 }
 
 void moveRobotArm() {
-  Serial.print("Testing:");
+  Serial.print("Testing:"); // doesn't work bc you need to call function
 }
 
 void loop() {
@@ -176,7 +176,7 @@ void loop() {
       hasButton1BeenPressedOnce = false;
       Serial.print("Button 1 was press twice!");
       
-      servo1.write(0);
+      servo1.write(0); // this moves the serrvos to a certain angle, ex. 45 is 45 degrees.
       servo2.write(0);
       servo3.write(0);
       
@@ -444,6 +444,7 @@ void loop() {
   }
 
 }
+
 ```
   
 </p>
