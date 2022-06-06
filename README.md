@@ -55,6 +55,11 @@ https://user-images.githubusercontent.com/71342159/155556728-a68f3392-b6fa-4784-
 <img src="https://github.com/Logan-Martin/Tic-Tac-Toe-Delta-Robot-Arm/blob/main/Photos/DeltaArmTicTacToeButtonBox.jpg"> 
 
 ---
+### Assembly 
+
+The Assembly process was actually quite simple after we had already printed just about everything we needed. All the joints were printed, we had bought all of the wooden dowels we were going to use, and we had also bought all the nails we needed. All that we need to do was to follow the CAD document that we had already made, and match what we made their with what we had in real life. One of the promblems we ran into with assembly was not fully assesing what we needed to construct this arm at first, what we were missing was 15 tiny screws that we did not think we were gonna need, but we got really really lucky because there was an immense amount of the same size screw in the back where all of the loose screws go. If those screws had not been there we would have had to spend more money and more time outside of the engineering lab to go out and buy these screws. Other than that we were good and we connected all of the dowels to the right joint, after cutting the dowels into the right size and then we had to modify one of the joint so that it could attach to the servo but after that we put it all together and it worked in a physical sense, the code still need to be ironed out and also the way we were holding it up was one of us would just hold it with our hands. All we need now is a way for it to stand on its own.
+
+---
 
 ### Problems we ran into
 
@@ -62,6 +67,7 @@ https://user-images.githubusercontent.com/71342159/155556728-a68f3392-b6fa-4784-
 2. How do we even code this thing? We eventually got to [this](https://github.com/deltarobotone/one_system_library), a library for a Arduino Delta arm. However this was not a 100% solution. The code that was in the background making everything possible was far too complex for us change.
 3. How are we going to pick up and place tic tac toe pieces? We chose to use magnets. This means that we need a way to magnitize and un-magnitize an area on the delta arm so we can pick things up. We need to 3D print the pieces and stop the process about half way through so we can fit a manget inside. This seems easy to do, but 3D printing takes time and that is not exactly something we a have a ton of.
 4. Are we going to have the tic tac toe board be cleared when the game is over? How will the robot arm knows who wins and when they win? Why did we even make this robot? Existentialism aside, these problems can only we be solved if we have enough time. Ideally I would love the board to clear itself, but that again will take time.
+5. Time. The lack of time we had and planning meant that we had to scrap the entire Tic-Tac-Toe part of our project.
 
 ---
 
