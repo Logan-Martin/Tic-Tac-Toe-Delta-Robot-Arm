@@ -9,7 +9,9 @@
 * [Materials](#Materials)
 * [Links & Documents](#Links)
 * [CAD Renders](#Cad-Renders)
+* [Assembly](#Assembly)
 * [Problems we ran into](#Problems-we-ran-into)
+* [Reflection](#Reflection)
 * [Code](#Code)
 
 ---
