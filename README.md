@@ -60,7 +60,7 @@ https://user-images.githubusercontent.com/71342159/155556728-a68f3392-b6fa-4784-
 ### Assembly 
 
 The Assembly process was actually quite simple after we had already printed just about everything we needed. All the joints were printed, we had bought all of the wooden dowels we were going to use, and we had also bought all the nails we needed. All that we need to do was to follow the CAD document that we had already made, and match what we made their with what we had in real life. One of the promblems we ran into with assembly was not fully assesing what we needed to construct this arm at first, what we were missing was 15 tiny screws that we did not think we were gonna need, but we got really really lucky because there was an immense amount of the same size screw in the back where all of the loose screws go. If those screws had not been there we would have had to spend more money and more time outside of the engineering lab to go out and buy these screws. Other than that we were good and we connected all of the dowels to the right joint, after cutting the dowels into the right size and then we had to modify one of the joint so that it could attach to the servo but after that we put it all together and it worked in a physical sense, the code still need to be ironed out and also the way we were holding it up was one of us would just hold it with our hands. All we need now is a way for it to stand on its own.
-<img src="https://github.com/Logan-Martin/Tic-Tac-Toe-Delta-Robot-Arm/blob/main/Photos/Full_Assembled_Delta.JPG"> 
+<img src="https://github.com/Logan-Martin/Tic-Tac-Toe-Delta-Robot-Arm/blob/main/Photos/Full_Assembled_Delta.jpg" width="500" height="600"> 
 
 ---
 
