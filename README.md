@@ -79,29 +79,35 @@ As it is now the end of the year and school ends in three days, I feel as if now
 
 ### Code
 
+https://create.arduino.cc/editor/lmartin27/9ed9d32c-3fc3-4d08-a1df-1bc89fe1599b/preview
+
 <details><summary>Click for Code.</summary>
 <p>
 
 ```
 #include <Servo.h>
+#include <LiquidCrystal_I2C.h> 
+LiquidCrystal_I2C lcd(0x3F,16,2);  // set the LCD address to 0x27 for a 16 chars and 2 line display.  
+// If 0x27 doesn't work, try 0x3F.
 
 // these are the buttons for moving the robot arm. Totally didn't re-write the names 3+ times because I forgot how to spell button.
-int button1 = 10;
-int button2 = 2;
-int button3 = 3;
-int button4 = 4;
-int button5 = 5;
+int button9 = 3;
+int button8 = 2;
+int button7 = 10;
 int button6 = 6;
-int button7 = 7;
-int button8 = 8;
-int button9 = 9;
+int button5 = 5;
+int button4 = 4;
+int button3 = 8;
+int button2 = 7;
+int button1 = 9;
 
 int PowerButton = 1; // not being used
-int LCDScreen = 2; // not being used
 
-Servo servo1;
-Servo servo2;
-Servo servo3;
+int maxDegreeServoCanBe = 180; // 90 is the mid. 180 is like the far right, 0 is like the far left.
+
+Servo servo1; // Forward/Back - 0 is back, 180 is front, 90 is mid
+Servo servo2; // Left
+Servo servo3; // Right
 
 int posForFirstServo = 0; // variable to store the servo position
 int posForSecondServo = 0;
@@ -130,8 +136,9 @@ bool hasButton9BeenPressedOnce = false;
 
 
 void setup() {
+  delay(100);
   Serial.begin(9600);
-  
+
   // this makes it so I can get inputs from things like a button
   pinMode(button1, INPUT);
   pinMode(button2, INPUT);
@@ -146,6 +153,26 @@ void setup() {
   servo1.attach(11);
   servo2.attach(12);
   servo3.attach(13);
+  
+  lcd.init();
+  lcd.backlight();
+  
+  lcd.setCursor(0,0);
+  lcd.print("Welcome to");
+  lcd.setCursor(0,1);
+  lcd.print("Tic-Tac-Toe!");
+  delay(2000);
+  lcd.clear();
+  lcd.setCursor(0,0);
+  lcd.print("Made by Logan");
+  lcd.setCursor(0,1);
+  lcd.print("and Cole.");
+  delay(2000);
+  lcd.clear();
+  lcd.setCursor(0,0);
+  lcd.print("Press any button");
+  lcd.setCursor(0,1);
+  lcd.print("twice. X is 1st.");
 
 }
 
@@ -179,33 +206,18 @@ void loop() {
       hasButton7BeenPressedOnce = false;
       hasButton8BeenPressedOnce = false;
       hasButton9BeenPressedOnce = false;
-
-      Serial.print("Button 1 Pressed!");
+      Serial.println("Button 1 Pressed!");
+      
     }
     else if (hasButton1BeenPressedOnce == true) {
       hasButton1AlreadyBeenPressed = true;
       hasButton1BeenPressedOnce = false;
-      Serial.print("Button 1 was press twice!");
+      Serial.println("Button 1 was press twice!");
       
-      servo1.write(0); // this moves the serrvos to a certain angle, ex. 45 is 45 degrees.
-      servo2.write(0);
+      servo1.write(90+60);
+      servo2.write(60);
       servo3.write(0);
       
-    while (posForFirstServo < 180) {
-      delay(10);
-      if (posForFirstServo == 90)
-        {
-          Serial.print("NICE!");
-          posForFirstServo = posForFirstServo + 1;
-          servo1.write(posForFirstServo);
-          break;
-        }
-        else
-        {
-          posForFirstServo = posForFirstServo + 1;
-          servo1.write(posForFirstServo);
-        }
-      }
     }
   }
   else if (buttonStateForButton1 == LOW and hasButton1AlreadyBeenPressed == true) {
@@ -228,17 +240,16 @@ void loop() {
       hasButton8BeenPressedOnce = false;
       hasButton9BeenPressedOnce = false;
 
-      Serial.print("Button 2 Pressed!");
+      Serial.println("Button 2 Pressed!");
     }
     else if (hasButton2BeenPressedOnce == true) {
       hasButton2AlreadyBeenPressed = true;
       hasButton2BeenPressedOnce = false;
-      Serial.print("Button 2 was press twice!");
-      servo1.write(10);
-      servo2.write(10);
-      servo3.write(10);
+      Serial.println("Button 2 was press twice!");
+      servo1.write(90+60);
+      servo2.write(0);
+      servo3.write(0);
       
-      posForFirstServo = 0;
     }
   }
   else if (buttonStateForButton2 == LOW and hasButton2AlreadyBeenPressed == true) {
@@ -259,15 +270,15 @@ void loop() {
       hasButton8BeenPressedOnce = false;
       hasButton9BeenPressedOnce = false;
 
-      Serial.print("Button 3 Pressed!");
+      Serial.println("Button 3 Pressed!");
     }
     else if (hasButton3BeenPressedOnce == true) {
       hasButton3AlreadyBeenPressed = true;
       hasButton3BeenPressedOnce = false;
-      Serial.print("Button 3 was press twice!");
-      servo1.write(20);
-      servo2.write(20);
-      servo3.write(20);
+      Serial.println("Button 3 was press twice!");
+      servo1.write(90+60);
+      servo2.write(0);
+      servo3.write(60);
     }
   }
   else if (buttonStateForButton3 == LOW and hasButton3AlreadyBeenPressed == true) {
@@ -289,15 +300,15 @@ void loop() {
       hasButton8BeenPressedOnce = false;
       hasButton9BeenPressedOnce = false;
 
-      Serial.print("Button 4 Pressed!");
+      Serial.println("Button 4 Pressed!");
     }
     else if (hasButton4BeenPressedOnce == true) {
       hasButton4AlreadyBeenPressed = true;
       hasButton4BeenPressedOnce = false;
-      Serial.print("Button 4 was press twice!");
-      servo1.write(30);
-      servo2.write(30);
-      servo3.write(30);
+      Serial.println("Button 4 was press twice!");
+      servo1.write(90); // 90 is mid, 0 is back, 180 is front
+      servo2.write(60);
+      servo3.write(0);
     }
   }
   else if (buttonStateForButton4 == LOW and hasButton4AlreadyBeenPressed == true) {
@@ -319,15 +330,15 @@ void loop() {
       hasButton8BeenPressedOnce = false;
       hasButton9BeenPressedOnce = false;
 
-      Serial.print("Button 5 Pressed!");
+      Serial.println("Button 5 Pressed!");
     }
     else if (hasButton5BeenPressedOnce == true) {
       hasButton5AlreadyBeenPressed = true;
       hasButton5BeenPressedOnce = false;
-      Serial.print("Button 5 was press twice!");
-      servo1.write(40);
-      servo2.write(40);
-      servo3.write(40);
+      Serial.println("Button 5 was press twice!");
+      servo1.write(90); // 90 is mid, 0 is back, 180 is front
+      servo2.write(0);
+      servo3.write(0);
     }
   }
   else if (buttonStateForButton5 == LOW and hasButton5AlreadyBeenPressed == true) {
@@ -349,15 +360,15 @@ void loop() {
       hasButton8BeenPressedOnce = false;
       hasButton9BeenPressedOnce = false;
 
-      Serial.print("Button 6 Pressed!");
+      Serial.println("Button 6 Pressed!");
     }
     else if (hasButton6BeenPressedOnce == true) {
       hasButton6AlreadyBeenPressed = true;
       hasButton6BeenPressedOnce = false;
-      Serial.print("Button 6 was press twice!");
-      servo1.write(50);
-      servo2.write(50);
-      servo3.write(50);
+      Serial.println("Button 6 was press twice!");
+      servo1.write(90); // 90 is mid, 0 is back, 180 is front
+      servo2.write(0); // Left
+      servo3.write(60); // Right
     }
   }
   else if (buttonStateForButton6 == LOW and hasButton6AlreadyBeenPressed == true) {
@@ -379,15 +390,15 @@ void loop() {
       hasButton8BeenPressedOnce = false;
       hasButton9BeenPressedOnce = false;
 
-      Serial.print("Button 7 Pressed!");
+      Serial.println("Button 7 Pressed!");
     }
     else if (hasButton7BeenPressedOnce == true) {
       hasButton7AlreadyBeenPressed = true;
       hasButton7BeenPressedOnce = false;
-      Serial.print("Button 7 was press twice!");
-      servo1.write(60);
+      Serial.println("Button 7 was press twice!");
+      servo1.write(0); // 90 is mid, 0 is back, 180 is front
       servo2.write(60);
-      servo3.write(60);
+      servo3.write(0);
     }
   }
   else if (buttonStateForButton7 == LOW and hasButton7AlreadyBeenPressed == true) {
@@ -409,15 +420,15 @@ void loop() {
       hasButton8BeenPressedOnce = true;
       hasButton9BeenPressedOnce = false;
 
-      Serial.print("Button 8 Pressed!");
+      Serial.println("Button 8 Pressed!");
     }
     else if (hasButton8BeenPressedOnce == true) {
       hasButton8AlreadyBeenPressed = true;
       hasButton8BeenPressedOnce = false;
       Serial.print("Button 8 was press twice!");
-      servo1.write(70);
-      servo2.write(70);
-      servo3.write(70);
+      servo1.write(0); // 90 is mid, 0 is back, 180 is front
+      servo2.write(0);
+      servo3.write(0);
     }
   }
   else if (buttonStateForButton8 == LOW and hasButton8AlreadyBeenPressed == true) {
@@ -439,16 +450,18 @@ void loop() {
       hasButton8BeenPressedOnce = false;
       hasButton9BeenPressedOnce = true;
 
-      Serial.print("Button 9 Pressed!");
+      Serial.println("Button 9 Pressed!");
     }
     else if (hasButton9BeenPressedOnce == true) {
       hasButton9AlreadyBeenPressed = true;
       hasButton9BeenPressedOnce = false;
-      Serial.print("Button 9 was press twice!");
-      servo1.write(90);
-      servo2.write(90);
-      servo3.write(90);
+      Serial.println("Button 9 was press twice!");
+      
+      servo1.write(0); // 90 is mid, 0 is back, 180 is front
+      servo2.write(0);
+      servo3.write(60);
     }
+      
   }
   else if (buttonStateForButton9 == LOW and hasButton9AlreadyBeenPressed == true) {
     hasButton9AlreadyBeenPressed = false;
@@ -461,9 +474,4 @@ void loop() {
 </p>
 </details>
   
-
   
- 
-
-
-
